@@ -35,6 +35,28 @@ class _MovieListingState extends State<MovieListing> {
               const SizedBox(
                 height: 12,
               ),
+              Row(
+                children: [
+                  Text(
+                    "103 mins",
+                    style: TextStyle(color: cinemaFontMuted, fontSize: 16),
+                  ),
+                  SizedBox(
+                    width: 12,
+                  ),
+                  Text(
+                    "PG",
+                    style: TextStyle(color: cinemaFontMuted, fontSize: 16),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              Text("An insurance salesman begins to suspect that his whole life is actually some sort of reality TV show."),
+              const SizedBox(
+                height: 12,
+              ),
               DropdownMenu<int>(
                   initialSelection: _ticketamount,
                   onSelected: (int? value) {
