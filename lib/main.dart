@@ -12,10 +12,19 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Sandwich Shop App',
       home: Scaffold(
-        appBar: AppBar(title: const Text('Sandwich Counter')),
-        body: const Center(child: OrderItemDisplay(5, 'Footlong'),
+        appBar: AppBar(
+          title: const Text('My Sandwich Shop'),
+          backgroundColor: Colors.orange,
+
+        ),
+        body: const Center(
+          child: OrderItemDisplay(5, 'Footlong'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+          ),
       ),
-    ),
   );
 }
 }
