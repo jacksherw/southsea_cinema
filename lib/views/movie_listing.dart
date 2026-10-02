@@ -35,6 +35,35 @@ class _MovieListingState extends State<MovieListing> {
               const SizedBox(
                 height: 12,
               ),
-              ])));
+              DropdownMenu<int>(
+                  initialSelection: _ticketamount,
+                  onSelected: (int? value) {
+                    if (value != null) {
+                      setState(() {
+                        _ticketamount = value;
+                      });
+                    }
+                  },
+                  dropdownMenuEntries: const [
+                    DropdownMenuEntry(value: 1, label: "1"),
+                    DropdownMenuEntry(value: 2, label: "2"),
+                    DropdownMenuEntry(value: 3, label: "3"),
+                    DropdownMenuEntry(value: 4, label: "4"),
+                    DropdownMenuEntry(value: 5, label: "5")
+                  ]),
+                  const SizedBox(height: 12,),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    _feedback = "$_ticketamount ticket(s) added to order";
+                  });
+                },
+                child: Text("Add to order"),
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              Text(_feedback),
+            ])));
   }
 }
