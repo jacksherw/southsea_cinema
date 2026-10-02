@@ -25,28 +25,29 @@ class _MovieListingState extends State<MovieListing> {
         body: Container(
             padding: const EdgeInsets.all(16.0),
             child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, 
+                children: [
               Text(
                 "The Truman Show",
                 style: cinemaHeaderStyle.copyWith(
-                  fontSize: 24,
+                  fontSize: 25,
                 ),
               ),
               const SizedBox(
-                height: 12,
+                height: 13,
               ),
               Row(
                 children: [
                   Text(
                     "103 mins",
-                    style: TextStyle(color: cinemaFontMuted, fontSize: 16),
+                    style: TextStyle(color: cinemaFontMuted, fontSize: 14),
                   ),
                   SizedBox(
                     width: 12,
                   ),
                   Text(
                     "PG",
-                    style: TextStyle(color: cinemaFontMuted, fontSize: 16),
+                    style: TextStyle(color: cinemaFontMuted, fontSize: 14),
                   )
                 ],
               ),
@@ -54,6 +55,27 @@ class _MovieListingState extends State<MovieListing> {
                 height: 12,
               ),
               Text("An insurance salesman begins to suspect that his whole life is actually some sort of reality TV show."),
+              const SizedBox(
+                height: 40,
+              ),
+              Text(
+                    "Southsea Cinema Room",
+                    style: TextStyle( fontSize: 17),
+                  ),
+              const SizedBox(
+                height: 12,
+              ),
+              Text(
+                    "Friday 2nd Oct, 17:00 - ends at 18:43",
+                    style: TextStyle( fontSize: 16),
+                  ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                    "Select quantities (up to 5 in total)",
+                    style: TextStyle( fontSize: 14),
+                  ),
               const SizedBox(
                 height: 12,
               ),
