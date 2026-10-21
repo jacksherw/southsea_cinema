@@ -15,10 +15,12 @@ class SouthseaCinemaApp extends StatelessWidget {
     return MaterialApp(
       title: "Southsea Cinema & Arts Centre",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData(
+        useMaterial3: true,
         scaffoldBackgroundColor: cinemaBackground,
         colorScheme: ColorScheme.fromSeed(
           seedColor: cinemaBrand,
+          brightness: Brightness.dark,
           primary: cinemaBrand,
           surface: cinemaSurface,
         ),
