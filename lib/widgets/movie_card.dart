@@ -4,7 +4,6 @@ import 'package:southsea_cinema/models/movie.dart';
 
 class MovieCard extends StatefulWidget {
   final Movie movie;
-
   const MovieCard({
     super.key,
     required this.movie,
