@@ -10,7 +10,7 @@ class MovieRepository {
             'An insurance salesman begins to suspect that his whole life is actually some sort of reality TV show.',
         ageRating: 'PG',
         runtime: '103 mins',
-        screeningTime: '17:00',
+        screeningTime: '19:00',
         ticketPrice: 7.50,
         imagePath: 'assets/images/trumanshow2.jpeg',
       ),
@@ -21,10 +21,19 @@ class MovieRepository {
             'As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to drive a seemingly obsolete special weapon in a desperate effort to save the world from the apocalypse.',
         ageRating: 'U',
         runtime: '133 mins',
-        screeningTime: '19:00',
+        screeningTime: '17:00',
         ticketPrice: 7.50,
         imagePath: 'assets/images/pacific-rim.jpeg',
       ),
     ];
+  }
+
+  Movie? getMovieById(String id) {
+    for (final Movie movie in getMovies()) {
+      if (movie.id == id) {
+        return movie;
+      }
+    }
+    return null;
   }
 }
