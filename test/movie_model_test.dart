@@ -54,5 +54,48 @@ void main() {
 
       expect(movie.formattedPrice, '£7.50');
     });
+
+    test('fromJson and toJson convert all fields', () {
+      final Map<String, dynamic> json = <String, dynamic>{
+        'id': 'test-movie',
+        'title': 'Test Movie',
+        'synopsis': 'A test synopsis.',
+        'ageRating': 'PG',
+        'runtime': '100 mins',
+        'screeningTime': '19:00',
+        'ticketPrice': 7.5,
+        'imagePath': 'assets/images/test.jpeg',
+      };
+
+      final Movie movie = Movie.fromJson(json);
+
+      expect(movie.id, 'test-movie');
+      expect(movie.title, 'Test Movie');
+      expect(movie.synopsis, 'A test synopsis.');
+      expect(movie.ageRating, 'PG');
+      expect(movie.runtime, '100 mins');
+      expect(movie.screeningTime, '19:00');
+      expect(movie.ticketPrice, 7.5);
+      expect(movie.imagePath, 'assets/images/test.jpeg');
+      expect(movie.toJson(), json);
+    });
+
+    test('fromJson converts a whole-number price to a double', () {
+      final Map<String, dynamic> json = <String, dynamic>{
+        'id': 'whole-price',
+        'title': 'Whole Price Movie',
+        'synopsis': 'Synopsis.',
+        'ageRating': 'U',
+        'runtime': '90 mins',
+        'screeningTime': '17:00',
+        'ticketPrice': 8,
+        'imagePath': 'assets/images/test.jpeg',
+      };
+
+      final Movie movie = Movie.fromJson(json);
+
+      expect(movie.ticketPrice, isA<double>());
+      expect(movie.ticketPrice, 8.0);
+    });
   });
 }
